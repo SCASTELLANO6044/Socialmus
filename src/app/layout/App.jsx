@@ -1,13 +1,15 @@
 import React from 'react';
+import { Container } from 'semantic-ui-react';
 import EventDashBoard from '../../features/events/eventsDashboard/EventDashBoard';
+import NavBar from '../../features/nav/NavBar';
 
-function App() {
+export default function App() {
   return (
     <div>
-      <h1>Socialmus</h1>
-      <EventDashBoard/>
+      <NavBar/>
+      <Container>
+        <EventDashBoard/>
+      </Container>
     </div>
   );
 }
-
-export default App;
