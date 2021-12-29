@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { Container } from 'semantic-ui-react';
 import EventDashBoard from '../../features/events/eventsDashboard/EventDashBoard';
 import NavBar from '../../features/nav/NavBar';
 
 export default function App() {
   return (
-    <div>
+    <Fragment>
       <NavBar/>
-      <Container>
-        <EventDashBoard/>
+      <Container className='main'>
+        <EventDashBoard />
       </Container>
-    </div>
+    </Fragment>
   );
 }
