@@ -14,7 +14,7 @@ export default function EventDashBoard ({formOpen, setFormOpen}){
             </Grid.Column>
             <Grid.Column width={8}>
                 {formOpen &&
-                <EventForm setFormOpen={setFormOpen}/>}
+                <EventForm setFormOpen={setFormOpen} setEvents={setEvents}/>}
             </Grid.Column>
         </Grid>
     )
