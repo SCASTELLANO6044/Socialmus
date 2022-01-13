@@ -7,6 +7,10 @@ import { sampleData } from '../../../app/api/sampleData';
 export default function EventDashBoard ({formOpen, setFormOpen}){
     const [events, setEvents] = useState(sampleData);
 
+    function handleCreateEvent(event){
+        setEvents([...events, event])
+    }
+
     return(
         <Grid>
             <Grid.Column width={8}>
@@ -14,7 +18,12 @@ export default function EventDashBoard ({formOpen, setFormOpen}){
             </Grid.Column>
             <Grid.Column width={8}>
                 {formOpen &&
-                <EventForm setFormOpen={setFormOpen} setEvents={setEvents}/>}
+                    <EventForm 
+                        setFormOpen={setFormOpen} 
+                        setEvents={setEvents}
+                        createEvent={handleCreateEvent}
+                    />
+                }
             </Grid.Column>
         </Grid>
     )
